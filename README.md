@@ -5,12 +5,14 @@
 	<br>
 You can add your own recipes and comment others.</p>
 
+<br>
+
 <h3>More informations about this website</h3>
 <ul>
 <li>You can add an avatar in your profile</li>
   <li>You can add your recipes</li>
   <li>You can edit or delete your own recipes</li>
-  <li>In your profile you have also your recipes and personal informations with your name and you email</li>
+  <li>In your profile you have also your recipes and personal informations with your name and your email</li>
   <li>You can comment others recipes</li>
   <li>You can also edit or delete your own comments</li>
 </ul>
