@@ -17,8 +17,7 @@ You can add your own recipes and comment others.</p>
   <li>You can also edit or delete your own comments</li>
 </ul>
 
-<h3>You have to indicate :</h3>
-<h5>Recipes</h5>
+<h3>You have to indicate when you are adding a recipe :</h3>
 <ul>
 	<li>Name of recipe</li>
 	<li>Ingredients</li>
