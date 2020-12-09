@@ -31,12 +31,13 @@ You can add your own recipes and comment others.</p>
 
 <br>
 
-<h1>Screenshots</h1>
-<p>I have included some pictures in the site because it's something which can be very attractive. Morevoer, I have also included images in the welcome page if people are not yet connected</p>
-
-<br>
-
 <h1>Installation of the project</h1>
 <p>Use only Laravel to build this project
 <br>
 Views also created with laravel</p>
+
+<br>
+
+<h1>Screenshots</h1>
+<p>I have included some pictures in the site because it's something which can be very attractive. Morevoer, I have also included images in the welcome page if people are not yet connected</p>
+
