@@ -7,8 +7,20 @@ You can add your own recipes and comment others.</p>
 
 <h3>More informations about this website</h3>
 <ul>
+<li>You can add an avatar in your profile</li>
   <li>You can add your recipes</li>
   <li>You can edit or delete your own recipes</li>
+  <li>In your profile you have also your recipes and personal informations with your name and you email</li>
   <li>You can comment others recipes</li>
   <li>You can also edit or delete your own comments</li>
+</ul>
+
+<h3>You have to indicate :</h3>
+<h5>Recipes</h5>
+<ul>
+	<li>Name of recipe</li>
+	<li>Ingredients</li>
+	<li>Estimated price of all ingredients</li>
+	<li>Description of the recipe (with steps)</li>
+	<li>Add an image</li>
 </ul>
