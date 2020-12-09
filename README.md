@@ -1,11 +1,11 @@
 <h1>Recipe-site Project</h1>
 
-<h5>What is this site ?</h5>
+<h4>What is this site ?</h4>
 <p>This website is useful if you are looking for recipes or if you want to show what are you doing.
 	<br>
 You can add your own recipes and comment others.</p>
 
-<h5>More informations about this website</h5>
+<h4>More informations about this website</h4>
 <ul>
 <li>You can add an avatar in your profile</li>
   <li>You can add your recipes</li>
@@ -15,7 +15,7 @@ You can add your own recipes and comment others.</p>
   <li>You can also edit or delete your own comments</li>
 </ul>
 
-<h5>You have to indicate when you are adding a recipe :</h5>
+<h4>You have to indicate when you are adding a recipe :</h4>
 <ul>
 	<li>Name of recipe</li>
 	<li>Ingredients</li>
