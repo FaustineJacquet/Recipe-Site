@@ -38,12 +38,11 @@ Views also created with laravel</p>
 
 <h4>Instructions to install new project laravel</h4>
 <ul>
-	<li>composer create-project laravel/laravel example-app</li>
-	<li>cd example-app</li>
-	<li>php artisan serve</li>
+	<li>composer create-project laravel/laravel Laravue</li>
+	<li>cd Laravue</li>
+	<li>php artisan serve (which have to be activated every time)</li>
 	<li>Open the link</li>
 </ul>
-<p>"php artisan serve" has to be activated every time</p>
 
 <br>
 
