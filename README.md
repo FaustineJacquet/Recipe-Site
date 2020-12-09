@@ -27,3 +27,9 @@ You can add your own recipes and comment others.</p>
 <br>
 
 <h1>Motivation</h1>
+<p>It can be very interessant to show recipes and say what we are thinking about them to help people to know if they have to do it or if it's not useful because it's not a good recipe. It could be also interessant to create easily recipes and edit them without create entirely if there is a fault inside the description or if we change the recipe progressively</p>
+
+<br>
+
+<h1>Screenshots</h1>
+<p>I have included some pictures in the site because it's something which can be very attractive. Morevoer, I have also included images in the welcome page if people are not yet connected</p>
