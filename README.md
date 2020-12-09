@@ -1,5 +1,7 @@
 <h1>Recipe-site Project</h1>
 
+<br>
+
 <h3>What is this site ?</h3>
 <p>This website is useful if you are looking for recipes or if you want to show what are you doing.
 	<br>
@@ -16,6 +18,8 @@ You can add your own recipes and comment others.</p>
   <li>You can comment others recipes</li>
   <li>You can also edit or delete your own comments</li>
 </ul>
+
+<br>
 
 <h3>You have to indicate when you are adding a recipe :</h3>
 <ul>
