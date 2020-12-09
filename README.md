@@ -36,6 +36,15 @@ You can add your own recipes and comment others.</p>
 <br>
 Views also created with laravel</p>
 
+<h4>Instructions to install new project laravel</h4>
+<ul>
+	<li>composer create-project laravel/laravel example-app</li>
+	<li>cd example-app</li>
+	<li>php artisan serve</li>
+	<li>Open the link</li>
+</ul>
+<p>"php artisan serve" has to be activated every time</p>
+
 <br>
 
 <h1>Screenshots</h1>
