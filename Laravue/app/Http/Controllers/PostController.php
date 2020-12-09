@@ -84,11 +84,6 @@ class PostController extends Controller
     public function update(Request $request, $post)
     {
     	$post=Post::find($post);
-
-        request()->validate([
-            'image' => 'required',
-        ]);
-
         $post->name = $request->name;
         $post->ingredients = $request->ingredients;
         $post->price = $request->price;

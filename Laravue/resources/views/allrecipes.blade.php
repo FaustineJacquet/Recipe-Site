@@ -26,6 +26,7 @@
                     <h5 class="card-title"> {{$post->name}}</h5>
                     <p class="card-text"> Estimate price : {{$post->price}} $</p>
                     <a class="show" href="{{route('post_show', ['id'=>$post->id])}}" variant="light" onmouseover="this.style.background='#f9c4ff'" onmouseout="this.style.background='white'"> Show details about this recipe </a>
+
                   </div>
 
                 </div>

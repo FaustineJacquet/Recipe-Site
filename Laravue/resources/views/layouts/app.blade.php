@@ -42,6 +42,10 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
+                        <li class="nav-item" style="margin-right: 25vw;">
+                            <a class="nav-link" href="{{ route('post_index') }}">{{ __('All Recipes') }}</a>
+                        </li>
+
                         @if (Route::has('login'))
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -64,10 +68,10 @@
                             <a class="nav-link" href="{{ route('post_index') }}">{{ __('All Recipes') }}</a>
                         </li>
                         <li class="nav-item" style="margin-right: 7vw;">
-                         <a class="nav-link" href="{{ route('post_create')}}">{{ __('Add Recipe') }}</a>
-                     </li>
+                           <a class="nav-link" href="{{ route('post_create')}}">{{ __('Add Recipe') }}</a>
+                       </li>
 
-                     <li class="nav-item dropdown">
+                       <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="position: relative; padding-left: 50px;" v-pre>
                             <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height: 32px; position: absolute; top: 4px; left: 10px; border-radius: 50%;">
                             {{ Auth::user()->name }}

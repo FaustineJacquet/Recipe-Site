@@ -36,7 +36,7 @@
     <p class="email">{{ __('with this email ->  ') }}{{ Auth::user()->email }}<p>
 
       @else
-      <p class="youhaveto">You have to login or register <br> If you want to see recipes</p>
+      <p class="youhaveto">You have to login or register <br> If you want to create recipes or comments</p>
 
       <div class="container">
         <div class="row justify-content-center">
