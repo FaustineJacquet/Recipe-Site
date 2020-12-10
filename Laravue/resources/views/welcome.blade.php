@@ -20,7 +20,53 @@
 
     @if (Route::has('login'))
     @auth
-    <div class="welcomepage"><h1 class="helloname">{{ __('Hello') }} {{ Auth::user()->name }} </h1></div>
+    <div>
+
+      <div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+
+                 <h1 class="textrecipe">Recipes</h1>              
+               </div>
+
+               <div>
+
+                 <div class="container-fluid" style="margin-top: 2vh; margin-bottom: 3vh;">
+                  <div class="row">
+                    @foreach ($posts as $post)
+                    <div class="col-sm-6 col-lg-4" style="margin-top: 3vh;">
+
+                      <div class="card" style="border: solid 3px; border-color: #f9c4ff;">
+
+                        <img src="/storage/{{$post->image}}" class="card-img-top" alt="...">
+
+                        <div class="card-body">
+                          <h5 class="card-title"> {{$post->name}}</h5>
+                          <p class="card-text"> Estimate price : {{$post->price}} $</p>
+                          <a class="show" href="{{route('post_show', ['id'=>$post->id])}}" variant="light" onmouseover="this.style.background='#f9c4ff'" onmouseout="this.style.background='white'"> Show details about this recipe </a>
+
+                        </div>
+
+                      </div>
+                    </div>
+                    @endforeach
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    @else
+    <p class="youhaveto">You have to login or register <br> If you want to create recipes or comments</p>
+    <p class="seerecipes">You can also see recipes at the bottom of the page</p>
 
     <div class="container">
       <div class="row justify-content-center">
@@ -32,27 +78,50 @@
       </div>
     </div>
 
-    <p class="login">{{ __('You are now logged in !') }}</p>
-    <p class="email">{{ __('with this email ->  ') }}{{ Auth::user()->email }}<p>
+    <div class="container" style="margin-top: 20vh;">
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
 
-      @else
-      <p class="youhaveto">You have to login or register <br> If you want to create recipes or comments</p>
+             <h1 class="textrecipe">Recipes</h1>              
+           </div>
 
-      <div class="container">
-        <div class="row justify-content-center">
+           <div>
 
-          <img class="imagewelcome" src="/images/poele.jpg">
-          <img class="imagewelcome" src="/images/cakerond.jpg">
-          <img class="imagewelcome" src="/images/pates.jpg">
+             <div class="container-fluid" style="margin-top: 2vh; margin-bottom: 3vh;">
+              <div class="row">
+                @foreach ($posts as $post)
+                <div class="col-sm-6 col-lg-4" style="margin-top: 3vh;">
 
+                  <div class="card" style="border: solid 3px; border-color: #f9c4ff;">
+
+                    <img src="/storage/{{$post->image}}" class="card-img-top" alt="...">
+
+                    <div class="card-body">
+                      <h5 class="card-title"> {{$post->name}}</h5>
+                      <p class="card-text"> Estimate price : {{$post->price}} $</p>
+                      <a class="show" href="{{route('post_show', ['id'=>$post->id])}}" variant="light" onmouseover="this.style.background='#f9c4ff'" onmouseout="this.style.background='white'"> Show details about this recipe </a>
+
+                    </div>
+
+                  </div>
+                </div>
+                @endforeach
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
-      @endif
-      @endauth
-
     </div>
 
+    @endif
+    @endauth
+
   </div>
+
+</div>
 </body>
 </html>
 

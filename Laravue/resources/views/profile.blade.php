@@ -2,56 +2,55 @@
 
 @section('content')
 
-  <div class="container">
-    <div class="row">
+<div class="container">
+  <div class="row">
 
-      <div class="col-md-7">
-        <div class="card color">
+    <div class="col-md-7">
+      <div class="card color">
 
-          <div class="card-header color"><h2 class="profilename">{{ $user->name }}'s Profile</h2></div>
+        <div class="card-header color"><h2 class="profilename">{{ $user->name }}'s Profile</h2></div>
 
-          <div>
+        <div>
 
-            <div class="card card-widget widget-user">
-              <!-- Add the bg color to the header using any of the bg-* classes -->
-              <div class="widget-user-header text-white">
+          <div class="card card-widget widget-user">
+            <!-- Add the bg color to the header using any of the bg-* classes -->
+            <div class="widget-user-header text-white">
 
-                <div class="card-body color picture">
+              <div class="card-body color picture">
 
-                  <img class="avatar" src="/uploads/avatars/{{ $user->avatar }}">
-                </div>
-
+                <img class="avatar" src="/uploads/avatars/{{ $user->avatar }}">
               </div>
 
             </div>
 
           </div>
-        </div>
-      </div>
-      <div class="col-md-5" style="margin-top: 4vh;">
-       <div class="card">
-        <div class="card-body color">
-         <div class="tab-content">
-          <h3 class="personal">Personal informations :</h3>
-          <h5>{{ __('Name :') }} {{ Auth::user()->name }}</h5>
-          <h5>{{ __('Email :') }}  {{ Auth::user()->email }}</h5>
+
         </div>
       </div>
     </div>
-
-    <div class="card" style="margin-top: 2rem;">
+    <div class="col-md-5" style="margin-top: 4vh;">
+     <div class="card">
       <div class="card-body color">
        <div class="tab-content">
+        <h3 class="personal">Personal informations :</h3>
+        <h5>{{ __('Name :') }} {{ Auth::user()->name }}</h5>
+        <h5>{{ __('Email :') }}  {{ Auth::user()->email }}</h5>
+      </div>
+    </div>
+  </div>
 
-        <div class="form-group">
-         <form enctype="multipart/form-data" action="/profile" method="POST">
-           <h3 class="updateimage">Update profile image :</h3>
-           <input type="file" name="avatar">
-           <input type="hidden" name="_token" value="{{ csrf_token() }}"><br>
-           <input class="yes" type="submit" value="Save image" onmouseover="this.style.background='#f9c4ff'" onmouseout="this.style.background='white'">
-         </form>
+  <div class="card" style="margin-top: 2rem;">
+    <div class="card-body color">
+     <div class="tab-content">
 
-       </div>
+      <div class="form-group">
+       <form enctype="multipart/form-data" action="/profile" method="POST">
+         <h3 class="updateimage">Update profile image :</h3>
+         <input type="file" name="avatar">
+         <input type="hidden" name="_token" value="{{ csrf_token() }}"><br>
+         <input class="yes" type="submit" value="Save image" onmouseover="this.style.background='#f9c4ff'" onmouseout="this.style.background='white'">
+       </form>
+
      </div>
    </div>
  </div>

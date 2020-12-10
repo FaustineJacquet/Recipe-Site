@@ -222,14 +222,41 @@ Profile page
 
 
 /*
-Welcome page
+Welcome page/allrecipes
 */
 
+.youhaveto {
+  font-size: 3rem; 
+  font-weight: bold
+  margin-top: 2vh; 
+  margin-bottom: 10vh; 
+  text-align: center;
+}
+
+
+.seerecipes {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+.textrecipe {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.textwithingredient {
+ font-size: 2rem;
+ text-align: center;
+}
+
+
 .imagewelcome {
-  max-height: 30vh; 
+  max-height: 25vh; 
   border-radius: 50%; 
   margin-left: 1vw; 
   margin-right: 1vw;
+  margin-top: 5vh;
 }
 
 .welcomepage {
@@ -253,12 +280,6 @@ Welcome page
   text-align: center;
 }
 
-.youhaveto {
-  font-size: 4rem; 
-  margin-top: 2vh; 
-  margin-bottom: 10vh; 
-  text-align: center;
-}
 
 /*
 Elements in show

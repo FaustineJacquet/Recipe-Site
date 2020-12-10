@@ -25,7 +25,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('Home', 'Home') }}
+                    {{ config('Allrecipes', 'All recipes') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -42,10 +42,10 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                        <li class="nav-item" style="margin-right: 25vw;">
-                            <a class="nav-link" href="{{ route('post_index') }}">{{ __('All Recipes') }}</a>
-                        </li>
-
+                         <form class="form-inline active-pink-3 active-pink-4" type="get" action="{{ url('/search') }}" style="margin-right: 20vw;">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                            <input class="form-control form-control-sm ml-3 w-75" type="search" name="query" placeholder="Search one ingredient" aria-label="Search" style="border: solid 3px; border-color: #f48fb1; font-size: 2vh;">
+                        </form>
                         @if (Route::has('login'))
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -59,15 +59,12 @@
                         @endif
                         @else
 
-                        <form class="form-inline active-pink-3 active-pink-4" type="get" action="{{ url('/search') }}" style="margin-right: 7vw;">
+                        <form class="form-inline active-pink-3 active-pink-4" type="get" action="{{ url('/search') }}" style="margin-right: 10vw;">
                             <i class="fas fa-search" aria-hidden="true"></i>
                             <input class="form-control form-control-sm ml-3 w-75" type="search" name="query" placeholder="Search one ingredient" aria-label="Search" style="border: solid 3px; border-color: #f48fb1; font-size: 1vw;">
                         </form>
 
-                        <li class="nav-item" style="margin-right: 7vw;">
-                            <a class="nav-link" href="{{ route('post_index') }}">{{ __('All Recipes') }}</a>
-                        </li>
-                        <li class="nav-item" style="margin-right: 7vw;">
+                        <li class="nav-item" style="margin-right: 10vw;">
                            <a class="nav-link" href="{{ route('post_create')}}">{{ __('Add Recipe') }}</a>
                        </li>
 

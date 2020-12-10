@@ -8,7 +8,7 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<div class="textrecipe">Recipes with this ingredient</div>
+						<div class="textwithingredient">Recipes with this ingredient</div>
 					</div>
 
 					<div>

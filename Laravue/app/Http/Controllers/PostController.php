@@ -17,7 +17,7 @@ class PostController extends Controller
     public function index(Request $request)
     {
     	$posts = Post::all();
-    	return view('allrecipes', ['posts' => $posts]);
+    	return view('welcome', ['posts' => $posts]);
     }
 
     /**
@@ -47,7 +47,7 @@ class PostController extends Controller
     		'image' => $request->image->store("/posts", 'public'),
     	]);
     	$post->save();
-    	return redirect('/posts');
+    	return redirect('/');
     }
 
     /**

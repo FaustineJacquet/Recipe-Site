@@ -25,7 +25,8 @@ Route::get('/profile', [App\Http\Controllers\UserController::class, 'profile'])-
 
 Route::post('/profile', [App\Http\Controllers\UserController::class, 'update_avatar']);
 
-Route::get('/posts', [App\Http\Controllers\PostController::class, 'index'])->name('post_index');
+Route::get('/', [App\Http\Controllers\PostController::class, 'index'])->name('post_index');
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 
