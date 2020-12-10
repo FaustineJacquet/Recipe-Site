@@ -10,27 +10,6 @@ use Illuminate\Http\Request;
 class CommentsController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        $comment = Comment::all();
-        return view('allrecipes', ['comment' => $comment]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view('post/create');
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -44,17 +23,6 @@ class CommentsController extends Controller
         $comment->post_id = $request->post_id;
         $comment->save();
         return redirect()->route('post_show', ['id'=>$comment->post_id]);    
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Comment $comment)
-    {
-        //
     }
 
     /**
