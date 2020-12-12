@@ -6,9 +6,9 @@
 		<div class="col-sm-8 col-lg-8" >
 			<div class="card" style="border: solid 2px; border-color: #f9c4ff; margin-bottom: 5vh;">
 				<div class="color2">
-					<h1 class="card-title center">{{ $post->name }} </h1>
+					<h1 class="card-title center postname">{{ $post->name }} </h1>
 				</div>
-				<img class=".card-img-top-show" src="/storage/{{ $post->image }}">
+				<img class="card-img-top-show" src="/storage/{{ $post->image }}">
 				<div class="color2">
 					<h4 class="price"> Estimate price : {{$post->price}} $ </h4>
 					<h4 class="ingredients"> Ingredients : </h4> <p class="recipeingredients">{{$post->ingredients}}</p>
@@ -35,6 +35,7 @@
 					<form method="POST" action="{{ route('comments_update', ['id'=>$comment->id]   ) }}">
 						@csrf
 						<div class="form-group">
+							<p class="usercom">{{ $comment->created_at }}</p>
 							<textarea class="form-control" name="body">{{$comment->body}}</textarea>
 							<input type="hidden" name="post_id" value="{{ $post->id }}" />
 						</div>
@@ -47,7 +48,7 @@
 				@else
 				<p class="usercom">{{ $comment->user->name }} {{ $comment->created_at }}</p>
 				<p class="body">{{ $comment->body }}</p>
-				@endisset
+				
 
 				<?php if ($comment->user->name == Auth::user()->name) {  ?> 
 					<form action="{{ route('post_show', ['id'=>$post->id]) }}" method="GET">
@@ -60,6 +61,8 @@
 						<button type="submit" class="deletecomment" onmouseover="this.style.background='#f9c4ff'" onmouseout="this.style.background='white'"><i class="fas fa-minus-square"> Delete Comment</i></button>
 					</form>
 				<?php } ?>
+
+				@endisset
 
 				@empty
 				<p class="nocomments">This post has no comments</p>

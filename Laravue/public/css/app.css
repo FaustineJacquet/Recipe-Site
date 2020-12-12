@@ -56,47 +56,6 @@ html {
   color: #f48fb1;
 }
 
-/*
-Page with all recipes
-*/
-
-.textrecipe {
-  font-size: 9vh; 
-  font-weight: bold;
-  text-align: center;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
-.card-body {
-  border-top: solid 3px ; 
-  border-top-color: #f9c4ff;
-}
-
-.card-img-top {
-  width: 100%; 
-  height: 50vh; 
-  object-fit: cover;
-}
-
-.show {
-  border: solid 1px; 
-  border-color: #f9c4ff; 
-  padding: 1vh; 
-  color: grey; 
-  display: block; 
-  margin-right: auto; 
-  margin-left: auto; 
-  text-align: center;
-  margin-bottom: 2vh;
-}
-
-.show:hover {
-  color: black;
-}
-
 
 /*
 Profile page
@@ -222,8 +181,56 @@ Profile page
 
 
 /*
-Welcome page/allrecipes
+Welcome page
 */
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.postname {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.titlewelcome {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.card-body {
+  border-top: solid 3px ; 
+  border-top-color: #f9c4ff;
+}
+
+.card-img-top {
+  width: 100%; 
+  height: 50vh; 
+  object-fit: cover;
+}
+
+.namecard {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.showrecipe {
+  border: solid 1px; 
+  border-color: #f9c4ff; 
+  padding: 1vh; 
+  color: grey; 
+  display: block; 
+  margin-right: auto; 
+  margin-left: auto; 
+  text-align: center;
+  margin-bottom: 2vh;
+}
+
+.showrecipe:hover {
+  color: black;
+}
+
 
 .youhaveto {
   font-size: 3rem; 
@@ -259,26 +266,6 @@ Welcome page/allrecipes
   margin-top: 5vh;
 }
 
-.welcomepage {
-  margin-top: 5vh; 
-  margin-bottom: 5vh;
-}
-
-.helloname {
-  text-align: center; 
-  font-size: 5rem;
-}
-
-.login {
-  font-size: 3rem; 
-  text-align: center; 
-  margin-top: 8vh;
-}
-
-.email {
-  font-size: 2rem; 
-  text-align: center;
-}
 
 
 /*
@@ -378,6 +365,12 @@ Elements in show
 .buttoncomment {
   float: right;
   margin-bottom: 5vh;
+}
+
+.request {
+  font-size: 1rem;
+  display: block;
+  margin: auto;
 }
 
 /*

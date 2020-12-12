@@ -26,10 +26,10 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-12">
-              <div class="card">
-                <div class="card-header">
+              <div class="card" style="border: solid 3px; border-color: #f9c4ff;">
+                <div class="card-header" style="background-color: #f9c4ff;">
 
-                 <h1 class="textrecipe">Recipes</h1>              
+                 <h1 class="titlewelcome">Recipes</h1>              
                </div>
 
                <div>
@@ -44,9 +44,9 @@
                         <img src="/storage/{{$post->image}}" class="card-img-top" alt="...">
 
                         <div class="card-body">
-                          <h5 class="card-title"> {{$post->name}}</h5>
+                          <h5 class="namecard card-title"> {{$post->name}}</h5>
                           <p class="card-text"> Estimate price : {{$post->price}} $</p>
-                          <a class="show" href="{{route('post_show', ['id'=>$post->id])}}" variant="light" onmouseover="this.style.background='#f9c4ff'" onmouseout="this.style.background='white'"> Show details about this recipe </a>
+                          <a class="showrecipe" href="{{route('post_show', ['id'=>$post->id])}}" variant="light" onmouseover="this.style.background='#f9c4ff'" onmouseout="this.style.background='white'"> Show details about this recipe </a>
 
                         </div>
 
@@ -81,8 +81,8 @@
     <div class="container" style="margin-top: 20vh;">
       <div class="row justify-content-center">
         <div class="col-md-12">
-          <div class="card">
-            <div class="card-header">
+          <div class="card" style="border: solid 3px; border-color: #f9c4ff;">
+            <div class="card-header" style="background-color: #f9c4ff;">
 
              <h1 class="textrecipe">Recipes</h1>              
            </div>
@@ -99,9 +99,11 @@
                     <img src="/storage/{{$post->image}}" class="card-img-top" alt="...">
 
                     <div class="card-body">
-                      <h5 class="card-title"> {{$post->name}}</h5>
-                      <p class="card-text"> Estimate price : {{$post->price}} $</p>
-                      <a class="show" href="{{route('post_show', ['id'=>$post->id])}}" variant="light" onmouseover="this.style.background='#f9c4ff'" onmouseout="this.style.background='white'"> Show details about this recipe </a>
+                      <div class="bodybody">
+                        <h5 class="card-title"> {{$post->name}}</h5>
+                        <p class="card-text"> Estimate price : {{$post->price}} $</p>
+                        <a class="showrecipe" href="{{route('post_show', ['id'=>$post->id])}}" variant="light" onmouseover="this.style.background='#f9c4ff'" onmouseout="this.style.background='white'"> Show details about this recipe </a>
+                      </div>
 
                     </div>
 

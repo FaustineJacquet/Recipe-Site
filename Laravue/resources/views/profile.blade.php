@@ -17,8 +17,10 @@
             <div class="widget-user-header text-white">
 
               <div class="card-body color picture">
+                <div class="bodybody">
 
-                <img class="avatar" src="/uploads/avatars/{{ $user->avatar }}">
+                  <img class="avatar" src="/uploads/avatars/{{ $user->avatar }}">
+                </div>
               </div>
 
             </div>
@@ -81,7 +83,7 @@
         <img class="imagestore" src="/storage/{{$post->image}}" class="card-img-top" alt="...">
         <h1 class="titleincard card-title"> {{$post->name}}</h1>
         <p class="textincard card-text"> {{$post->price}} $</p>
-        <a href="{{route('post_show', ['id'=>$post->id])}}" variant="light" class="show" onmouseover="this.style.background='#f9c4ff'" onmouseout="this.style.background='white'"> Show details about this recipe </a>
+        <a href="{{route('post_show', ['id'=>$post->id])}}" variant="light" class="showrecipe" onmouseover="this.style.background='#f9c4ff'" onmouseout="this.style.background='white'"> Show details about this recipe </a>
       </div>
     </div>
     @endforeach

@@ -24,7 +24,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/') }}" style="margin-bottom: 2vh; margin-top: 2vh;">
                     {{ config('Allrecipes', 'All recipes') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -42,7 +42,7 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                         <form class="form-inline active-pink-3 active-pink-4" type="get" action="{{ url('/search') }}" style="margin-right: 20vw;">
+                        <form class="form-inline active-pink-3 active-pink-4" type="get" action="{{ url('/search') }}" style="margin-right: 20vw;">
                             <i class="fas fa-search" aria-hidden="true"></i>
                             <input class="form-control form-control-sm ml-3 w-75" type="search" name="query" placeholder="Search one ingredient" aria-label="Search" style="border: solid 3px; border-color: #f48fb1; font-size: 2vh;">
                         </form>
@@ -59,41 +59,43 @@
                         @endif
                         @else
 
-                        <form class="form-inline active-pink-3 active-pink-4" type="get" action="{{ url('/search') }}" style="margin-right: 10vw;">
-                            <i class="fas fa-search" aria-hidden="true"></i>
-                            <input class="form-control form-control-sm ml-3 w-75" type="search" name="query" placeholder="Search one ingredient" aria-label="Search" style="border: solid 3px; border-color: #f48fb1; font-size: 1vw;">
-                        </form>
+                            <form class="form-inline active-pink-3 active-pink-4" type="get" action="{{ url('/search') }}" style="margin-right: 8vw;">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                                <input class="form-control form-control-sm ml-3 w-75" type="search" name="query" placeholder="Search one ingredient" aria-label="Search" style="border: solid 3px; border-color: #f48fb1; font-size: 2vh;">
+                            </form>
 
-                        <li class="nav-item" style="margin-right: 10vw;">
-                           <a class="nav-link" href="{{ route('post_create')}}">{{ __('Add Recipe') }}</a>
-                       </li>
 
-                       <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="position: relative; padding-left: 50px;" v-pre>
-                            <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height: 32px; position: absolute; top: 4px; left: 10px; border-radius: 50%;">
-                            {{ Auth::user()->name }}
-                        </a>
+                            <li class="nav-item" style="margin-top: 1vh; width: 20vw; margin-right: 2vw;">
+                               <a class="nav-link" href="{{ route('post_create')}}">{{ __('Add Recipe') }}</a>
+                           </li>
 
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                           <li class="nav-item dropdown" style="width: 20vw; margin-left: -10vw; width: 20vw;">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="position: relative; padding-left: 50px;" v-pre>
+                                <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height: 32px; top: 4px; left: 10px; border-radius: 50%; margin-right: 1vh;">
+                                {{ Auth::user()->name }}
+                            </a>
 
-                            <a class="dropdown-item" href="{{ route('profile') }}"><i class="fa fa-btn fa-user" style="padding-right: 1vw;"></i>{{ __('Profile') }}</a>
 
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();"><i class="fa fa-btn fa-sign-out" style="padding-right: 1vw;"></i>
-                            {{ __('Logout') }}
-                        </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="margin-left: 20vw;">
 
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </div>
-                </li>
+                        <a class="dropdown-item" href="{{ route('profile') }}"><i class="fa fa-btn fa-user" style="padding-right: 1vw;"></i>{{ __('Profile') }}</a>
 
-                @endguest
-            </ul>
-        </div>
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();"><i class="fa fa-btn fa-sign-out" style="padding-right: 1vw;"></i>
+                        {{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </div>
+            </li>
+
+            @endguest
+        </ul>
     </div>
+</div>
 </nav>
 
 <main class="py-4">
